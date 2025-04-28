@@ -1,8 +1,13 @@
 {
   "name": "newsnow-mcp-server",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "NewsNow MCP Server",
-  "keywords": ["mcp", "newsnow", "mcp-server", "hot-news"],
+  "keywords": [
+    "mcp",
+    "newsnow",
+    "mcp-server",
+    "hot-news"
+  ],
   "author": "Ou RongXing<orongxing@gmail.com>",
   "homepage": "https://github.com/ourongxing/newsnow-mcp-server#readme",
   "repository": {
@@ -25,12 +30,14 @@
   ],
   "dependencies": {
     "fastmcp": "^1.23.0",
+    "ofetch": "^1.4.1",
     "zod": "^3.24.3"
   },
   "scripts": {
     "dev": "unbuild --stub",
     "prepack": "unbuild",
     "build": "unbuild",
+    "publish": "pnpm -r publish --access public --no-git-checks",
     "lint": "eslint",
     "release": "bumpp",
     "lint:fix": "eslint --fix"
