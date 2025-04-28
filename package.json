@@ -1,0 +1,54 @@
+{
+  "name": "newsnow-mcp-server",
+  "version": "1.0.0",
+  "description": "NewsNow MCP Server",
+  "keywords": ["mcp", "newsnow", "mcp-server", "hot-news"],
+  "author": "Ou RongXing<orongxing@gmail.com>",
+  "homepage": "https://github.com/ourongxing/newsnow-mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ourongxing/newsnow-mcp-server.git"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.9.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "fastmcp": "^1.23.0",
+    "zod": "^3.24.3"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "prepack": "unbuild",
+    "build": "unbuild",
+    "lint": "eslint",
+    "release": "bumpp",
+    "lint:fix": "eslint --fix"
+  },
+  "devDependencies": {
+    "@ourongxing/eslint-config": "3.2.3-beta.6",
+    "@types/node": "^22.15.2",
+    "eslint": "^9.21.0",
+    "simple-git-hooks": "^2.11.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.25.0",
+    "unbuild": "^3.5.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

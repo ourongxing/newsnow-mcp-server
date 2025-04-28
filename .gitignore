@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vercel
+.output
+.vinxi
+.cache
+.data
+.wrangler
+.env
+.env.*
+dev-dist
+*.tsbuildinfo
+wrangler.toml
+imports.app.d.ts
+package-lock.json
