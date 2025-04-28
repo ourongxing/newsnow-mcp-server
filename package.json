@@ -22,12 +22,10 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -38,9 +36,8 @@
     "zod": "^3.24.3"
   },
   "scripts": {
-    "dev": "unbuild --stub",
-    "prepack": "unbuild",
-    "build": "unbuild",
+    "dev": "tsup --watch src/index.ts --format cjs --onSuccess \"node dist/index.cjs\"",
+    "build": "tsup src/index.ts --format cjs ",
     "publish": "pnpm -r publish --access public --no-git-checks",
     "lint": "eslint",
     "release": "bumpp",
@@ -51,6 +48,7 @@
     "@types/node": "^22.15.2",
     "eslint": "^9.21.0",
     "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.25.0",

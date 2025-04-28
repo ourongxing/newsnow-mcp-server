@@ -1,14 +1,10 @@
 import sources from "./sources.json"
 
-export const sourcesList = Object.entries(sources).filter(([_, source]) => {
+export const description = Object.entries(sources).filter(([_, source]) => {
   if (source.redirect) {
     return false
   }
   return true
 }).map(([id, source]) => {
-  return {
-    id,
-    name: source.name,
-    title: source.title,
-  }
-})
+  return source.title ? `${source.name}-${source.title} id is ${id}` : `${source.name} id is ${id}`
+}).join(";")

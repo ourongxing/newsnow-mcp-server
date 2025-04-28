@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "ES2020",
+    "moduleDetection": "force",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "allowJs": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "lib": ["ES2020"],
+    "rootDir": ".",
+    "baseUrl": ".",
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"]
+}
