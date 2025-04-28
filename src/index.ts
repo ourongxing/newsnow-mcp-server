@@ -23,13 +23,13 @@ const server = new FastMCP({
 
 server.addTool({
   name: `get_hotest_latest_news`,
-  description: `get news from hotest or latest, by id. ${description}`,
+  description: `get hotest or latest news from source by id. ${description}`,
   parameters: z.object({
     id: z.string(),
     count: z.number().default(10),
   }),
   annotations: {
-    title: "get news from hotest or latest, by id",
+    title: "get hotest or latest news from source by id.",
     readOnlyHint: true,
   },
   execute: async ({ id, count }) => {
