@@ -1,6 +1,6 @@
 {
   "name": "newsnow-mcp-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NewsNow MCP Server",
   "keywords": [
     "mcp",
@@ -32,6 +32,7 @@
     "dist"
   ],
   "dependencies": {
+    "bumpp": "^10.1.0",
     "fastmcp": "^1.23.0",
     "ofetch": "^1.4.1",
     "zod": "^3.24.3"
