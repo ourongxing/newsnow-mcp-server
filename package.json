@@ -18,14 +18,9 @@
   "packageManager": "pnpm@10.9.0",
   "type": "module",
   "bin": {
-    "newsnow-mcp-server": "dist/index.cjs"
+    "newsnow-mcp-server": "dist/index.js"
   },
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -37,8 +32,8 @@
     "zod": "^3.24.3"
   },
   "scripts": {
-    "dev": "tsup --watch src/index.ts --format cjs --onSuccess \"node dist/index.cjs\"",
-    "build": "tsup src/index.ts --format cjs ",
+    "dev": "tsup --watch --onSuccess \"node dist/index.mjs\"",
+    "build": "tsup",
     "publish": "pnpm -r publish --access public --no-git-checks",
     "lint": "eslint",
     "release": "bumpp",

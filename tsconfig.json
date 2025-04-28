@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "composite": true,
-    "target": "ES2020",
+    "target": "ES2018",
     "moduleDetection": "force",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -16,7 +16,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "lib": ["ES2020"],
+    "lib": ["ES2018"],
     "rootDir": ".",
     "baseUrl": ".",
   },
