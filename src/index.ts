@@ -1,4 +1,4 @@
-import { env } from "node:process"
+import process from "node:process"
 import { FastMCP } from "fastmcp"
 import { z } from "zod"
 import { $fetch } from "ofetch"
@@ -9,12 +9,16 @@ import type { SourceResponse } from "./typing"
 
 config()
 
+if (!process.env.BASE_URL) {
+  console.error("BASE_URL is not set")
+  process.exit(1)
+}
+const baseUrl = process.env.BASE_URL
+
 const server = new FastMCP({
   name: "NewsNow",
   version: packageJson.version as `${number}.${number}.${number}`,
 })
-
-console.log(env.BASE_URL)
 
 server.addTool({
   name: `get_hotest_latest_news`,
@@ -28,7 +32,6 @@ server.addTool({
     readOnlyHint: true,
   },
   execute: async ({ id, count }) => {
-    const baseUrl = env.BASE_URL ?? "https://newsnow.busiyi.world"
     const res: SourceResponse = await $fetch(`${baseUrl}/api/s?id=${id}`)
     return res.items.slice(0, count).map((item) => {
       return `[${item.title}](${item.url})`
