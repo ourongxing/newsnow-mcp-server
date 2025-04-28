@@ -1,6 +1,8 @@
 # newsnow-mcp-server
 
-MCP Server for [NewsNow](https://github.com/ourongxing/newsnow)
+![](/assets/og-image.png)
+
+Official MCP Server for [NewsNow](https://github.com/ourongxing/newsnow), 40+ sources available.
 
 ## Usage
 
@@ -12,7 +14,10 @@ MCP Server for [NewsNow](https://github.com/ourongxing/newsnow)
       "args": [
         "-y",
         "newsnow-mcp-server"
-      ]
+      ],
+      "env": {
+        "BASE_URL": "https://newsnow.busiyi.world"
+      }
     }
   }
 }
