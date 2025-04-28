@@ -1,6 +1,6 @@
 {
   "name": "newsnow-mcp-server",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "NewsNow MCP Server",
   "keywords": [
     "mcp",
@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "tsup --watch --onSuccess \"node dist/index.mjs\"",
     "build": "tsup",
-    "publish": "pnpm -r publish --access public --no-git-checks",
+    "publish": "pnpm publish --access public --no-git-checks",
     "lint": "eslint",
     "release": "bumpp",
     "lint:fix": "eslint --fix"
