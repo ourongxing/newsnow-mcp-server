@@ -22,8 +22,8 @@ const server = new FastMCP({
 })
 
 server.addTool({
-  name: "get_hotest_latest_news",
-  description: `get hotest or latest news from source by {id}, return {count: 10} news.`,
+  name: "get_hottest_latest_news",
+  description: `get hottest or latest news from source by {id}, return {count: 10} news.`,
   parameters: z.object({
     id: z.string().describe(`source id. e.g. ${description}`),
     count: z.any().default(10).describe("count of news to return."),
