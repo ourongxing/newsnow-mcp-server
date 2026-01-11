@@ -27,7 +27,7 @@
   "dependencies": {
     "bumpp": "^10.1.0",
     "dotenv": "^16.5.0",
-    "fastmcp": "^1.23.0",
+    "fastmcp": "1.20.0",
     "ofetch": "^1.4.1",
     "zod": "^3.24.3"
   },
