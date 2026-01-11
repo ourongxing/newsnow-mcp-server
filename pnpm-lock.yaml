@@ -15,8 +15,8 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       fastmcp:
-        specifier: ^1.23.0
-        version: 1.23.0
+        specifier: 1.20.0
+        version: 1.20.0
       ofetch:
         specifier: ^1.4.1
         version: 1.4.1
@@ -615,9 +615,6 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
-  '@standard-schema/spec@1.0.0':
-    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
-
   '@stylistic/eslint-plugin@2.13.0':
     resolution: {integrity: sha512-RnO1SaiCFHn666wNz2QfZEFxvmiNRqhzaMXHXxXXKt+MEP7aajlPxUSMIQpKAaJfverpovEYqjBOXDq6dDcaOQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -824,6 +821,7 @@ packages:
 
   '@zod/mini@4.0.0-beta.20250424T163858':
     resolution: {integrity: sha512-dUrw6GDXsFbbjvHBlqOrkWiFFNbo9EW+/D3NcoO+28rJdLM330tSMK16m3NrPhDbLbZU6VLEd0yL650w5Kqmkg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   accepts@2.0.0:
     resolution: {integrity: sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng==}
@@ -1535,8 +1533,8 @@ packages:
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
 
-  fastmcp@1.23.0:
-    resolution: {integrity: sha512-j4/gbEX0al9nhui4jj6KCzIizrXmCWuJpP9XVdvCztMApaRjAExxs5LxS+EOLxvuPT7+NENXGcisMEp6wNDwhg==}
+  fastmcp@1.20.0:
+    resolution: {integrity: sha512-Uc1uizmDGMup3GJKg9eh26dUHZPW4jpjfuzL4Of0aRzizbiMKgp3zTYNygvq7l6TT7ODL8+l6c3kOvUlLyVdZg==}
     hasBin: true
 
   fastq@1.19.1:
@@ -2814,10 +2812,6 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
-  undici@7.8.0:
-    resolution: {integrity: sha512-vFv1GA99b7eKO1HG/4RPu2Is3FBTWBrmzqzO0mz+rLxN3yXkE4mqRcb8g8fHxzX4blEysrNZLqg5RbJLqX5buA==}
-    engines: {node: '>=20.18.1'}
-
   unicorn-magic@0.3.0:
     resolution: {integrity: sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==}
     engines: {node: '>=18'}
@@ -2893,23 +2887,6 @@ packages:
   xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
-
-  xsschema@0.2.0-beta.3:
-    resolution: {integrity: sha512-ViOZ1a1kAPHvFjDJp4ITeutdlbnEs56lx/NotlvcitwN04eHnU3DhR+P5GvXT7A+69qKrXAx0YrccvmfwGnUGw==}
-    peerDependencies:
-      '@valibot/to-json-schema': ^1.0.0
-      arktype: ^2.1.16
-      effect: ^3.14.5
-      zod-to-json-schema: ^3.24.5
-    peerDependenciesMeta:
-      '@valibot/to-json-schema':
-        optional: true
-      arktype:
-        optional: true
-      effect:
-        optional: true
-      zod-to-json-schema:
-        optional: true
 
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
@@ -3474,8 +3451,6 @@ snapshots:
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
-
-  '@standard-schema/spec@1.0.0': {}
 
   '@stylistic/eslint-plugin@2.13.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -4620,25 +4595,19 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
-  fastmcp@1.23.0:
+  fastmcp@1.20.0:
     dependencies:
       '@modelcontextprotocol/sdk': 1.10.2
-      '@standard-schema/spec': 1.0.0
       execa: 9.5.2
       file-type: 20.5.0
       fuse.js: 7.1.0
       mcp-proxy: 2.13.0
       strict-event-emitter-types: 2.0.0
-      undici: 7.8.0
       uri-templates: 0.2.0
-      xsschema: 0.2.0-beta.3(zod-to-json-schema@3.24.5(zod@3.24.3))
       yargs: 17.7.2
       zod: 3.24.3
       zod-to-json-schema: 3.24.5(zod@3.24.3)
     transitivePeerDependencies:
-      - '@valibot/to-json-schema'
-      - arktype
-      - effect
       - supports-color
 
   fastq@1.19.1:
@@ -5912,8 +5881,6 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici@7.8.0: {}
-
   unicorn-magic@0.3.0: {}
 
   unist-util-stringify-position@2.0.3:
@@ -6015,10 +5982,6 @@ snapshots:
   wrappy@1.0.2: {}
 
   xml-name-validator@4.0.0: {}
-
-  xsschema@0.2.0-beta.3(zod-to-json-schema@3.24.5(zod@3.24.3)):
-    optionalDependencies:
-      zod-to-json-schema: 3.24.5(zod@3.24.3)
 
   y18n@5.0.8: {}
 
