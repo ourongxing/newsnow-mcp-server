@@ -15,7 +15,7 @@
     "url": "git+https://github.com/ourongxing/newsnow-mcp-server.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@11.5.1",
   "type": "module",
   "bin": {
     "newsnow-mcp-server": "dist/index.js"
@@ -25,35 +25,22 @@
     "dist"
   ],
   "dependencies": {
-    "bumpp": "^10.1.0",
-    "dotenv": "^16.5.0",
-    "fastmcp": "^1.23.0",
-    "ofetch": "^1.4.1",
-    "zod": "^3.24.3"
+    "bumpp": "^11.1.0",
+    "dotenv": "^17.4.2",
+    "fastmcp": "^4.0.1",
+    "ofetch": "^1.5.1",
+    "zod": "^4.4.3"
   },
   "scripts": {
-    "dev": "tsup --watch --onSuccess \"node dist/index.mjs\"",
+    "dev": "tsup --watch --onSuccess \"node dist/index.js\"",
     "build": "tsup",
     "publish": "pnpm publish --access public --no-git-checks",
-    "lint": "eslint",
-    "release": "bumpp",
-    "lint:fix": "eslint --fix"
+    "release": "bumpp"
   },
   "devDependencies": {
-    "@ourongxing/eslint-config": "3.2.3-beta.6",
-    "@types/node": "^22.15.2",
-    "eslint": "^9.21.0",
-    "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.25.0",
-    "unbuild": "^3.5.0"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
+    "@types/node": "^25.9.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
   }
 }

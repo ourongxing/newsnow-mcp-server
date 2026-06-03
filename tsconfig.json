@@ -18,7 +18,6 @@
     "skipLibCheck": true,
     "lib": ["ES2018"],
     "rootDir": ".",
-    "baseUrl": ".",
   },
   "include": ["src/**/*.ts", "src/**/*.js"]
 }

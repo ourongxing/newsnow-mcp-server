@@ -26,24 +26,18 @@ server.addTool({
   description: `get hottest or latest news from source by {id}, return {count: 10} news.`,
   parameters: z.object({
     id: z.string().describe(`source id. e.g. ${description}`),
-    count: z.any().default(10).describe("count of news to return."),
+    count: z.coerce.number().int().min(1).default(10).describe("count of news to return."),
   }),
   execute: async ({ id, count }) => {
-    let n = Number(count)
-    if (Number.isNaN(n) || n < 1) {
-      n = 10
-    }
     const res: SourceResponse = await $fetch(`${baseUrl}/api/s?id=${id}`, {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
       },
     })
-    return {
-      content: res.items.slice(0, count).map(item => ({
-        text: `[${item.title}](${item.url})`,
-        type: "text",
-      })),
-    }
+    return res.items
+      .slice(0, count)
+      .map((item, index) => `${index + 1}. [${item.title}](${item.url})`)
+      .join("\n")
   },
 })
 
